@@ -94,7 +94,6 @@ class mlp:
 		counter = 1
 		itr = 0
 		while counter <= self.epoch:
-			#print(counter)
 			prevcost = np.inf
 			cost = 0
 			
@@ -117,7 +116,6 @@ class mlp:
 					self.forward(x)
 					self.backward(x,target)
 					cost += ((-np.log(self.a[-1][target]))+self.l*regsum)/self.batch_size
-					#cost += (-(target.T.dot(np.log(self.a[-1]))+(1-target).T.dot(np.log(1-self.a[-1]))) + (0.5*self.l)*regsum)/self.batch_size
 
 				''' update the theta matrices. '''
 				for i in range(len(self.theta)):
@@ -228,7 +226,6 @@ class mlp:
 		epsilon = 1e-4
 		for x,target in zip(X,y):
 			x.shape = x.shape[0],1
-			#target = np.array(target == self.labels,dtype = 'int64')
 			target.shape = target.shape[0],1
 			self.forward(x)
 			self.backward(x,target)
