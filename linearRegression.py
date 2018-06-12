@@ -10,8 +10,7 @@ class linearRegression:
 		self.numberOfFeatures = numberOfFeatures
 		self.alpha = alpha
 		self.l = l
-		self.theta = np.random.randn(self.numberOfFeatures+1,1)	#theta is a n+1 * 1 parameter vector where +1 is for the bias.
-		#self.theta = np.zeros((self.numberOfFeatures+1,1))
+		self.theta = np.zeros((self.numberOfFeatures+1,1))	#theta is a n+1 * 1 parameter vector where +1 is for the bias.
 
 	def train(self,X,y):
 		if len(X.shape) == 1:
