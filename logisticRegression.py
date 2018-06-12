@@ -9,7 +9,6 @@ class logisticRegression:
 		self.alpha = alpha
 		self.l = l
 		self.cost = 0
-		#self.theta = np.random.randn(self.numberOfFeatures+1,1)
 		self.theta = np.zeros((self.numberOfFeatures+1,1))
 
 	def train(self,X,y):
