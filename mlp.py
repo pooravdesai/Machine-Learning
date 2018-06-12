@@ -53,7 +53,7 @@ class mlp:
 
 
 	def train(self,X,y):
-		''' batch gradient decent '''
+		''' mini-batch gradient descent '''
 		if len(X.shape) == 1:
 			X.shape = X.shape[0],1
 		m,n = X.shape
